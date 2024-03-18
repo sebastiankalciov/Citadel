@@ -1,2 +1,53 @@
-# Citadel
-Citadel is a Library Management System made in C language.
+# Citadel - Library Management System
+
+## Current functionalities
+
+
+
+
+## Requirements (class)
+Each person can borrow multiple books from a library. \
+Each person is uniquely identified by their NAME and SURNAME. \
+Every book contains information regarding its:
+- Title
+- Author
+- Copies available
+- For each loan, a document containing relevant information will be generated:
+    - Which person borrowed the books
+    - The books borrowed:
+        - Title + Author
+        - Copies borrowed
+
+Any person can see all the loans that they made. \
+Furthermore, ANY person can search the library for a
+specific book (by its title or author). \
+Any person can return the books that they borrowed, or they can
+donate new books to the library.
+
+## Functionalities:
+- LOGIN (from the command line)
+    - By using the arguments login [NAME] [SURNAME]
+    - 1.5pt are granted, as follows:
+        - 0.75pct for parsing the command line arguments
+        - 0.75pct for gathering the loans made by the person
+
+- BORROW BOOKS
+    - From the menu, can be done as long as the library has all the books requested
+    - 1.5pt are granted
+
+- RETURN / DONATE BOOKS
+    - From the menu
+    - 1.5pt are granted, as follows:
+        - 0.75pct return borrowed books
+        -  0.75pct donate new books
+
+- VIEW LOANS
+    - From the menu
+    - 1.5pt are granted
+
+- SEARCH FOR BOOKS
+    - From the menu
+    - 1.5pt are granted, as follows:
+        - 0.75pct search by title or author
+        - 0.75pct search by any combination (TITLE / AUTHOR / TITLE +
+          AUTHOR)
