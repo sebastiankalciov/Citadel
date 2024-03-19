@@ -4,7 +4,19 @@ project(Citadel C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(Citadel
-        source/authentification/login.c
-        source/authentification/register.c
-        source/loans/borrow.c
-        source/loans/returnBook.c)
+        source/authentification/login/login.c
+        source/authentification/register/register.c
+        source/loans/borrow/borrow.c
+        source/loans/return/return.c
+        source/main.c
+        source/templates/templates.c
+        source/templates/templates.c
+        source/templates/templates.c
+        source/authentification/login/login.h
+        source/templates/templates.h
+        source/loans/return/return.h
+        source/loans/donate/donate.h
+        source/loans/borrow/borrow.h
+        source/authentification/register/register.h
+        source/menu/menu.h
+        source/menu/menu.c)
