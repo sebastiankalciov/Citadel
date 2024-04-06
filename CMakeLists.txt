@@ -9,9 +9,6 @@ add_executable(Citadel
         source/loans/borrow/borrow.c
         source/loans/return/return.c
         source/main.c
-        source/templates/templates.c
-        source/templates/templates.c
-        source/templates/templates.c
         source/authentification/login/login.h
         source/templates/templates.h
         source/loans/return/return.h
@@ -19,4 +16,8 @@ add_executable(Citadel
         source/loans/borrow/borrow.h
         source/authentification/register/register.h
         source/menu/menu.h
-        source/menu/menu.c)
+        source/menu/menu.c
+        source/utils/files.h
+        source/utils/files.c
+        source/authentification/auth.h
+        source/authentification/auth.c)

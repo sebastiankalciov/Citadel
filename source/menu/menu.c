@@ -31,10 +31,10 @@ void displayAuthOptions() {
     printf("%s", WHITE "TIP: You can use the commands directly in command line (login [name] [surname] / register [name] [surname])\n" RESET);
 }
 
-void displayFunctionalities() {
+void displayFunctionalities(char* name) {
 
     printf("%s", "\n");
-    printf("%s", BLUE "Hello [insert name], what do you want to do today?\n" RESET);
+    printf(BLUE "Hello %s, what do you want to do today?\n", name);
     printf("%s", WHITE "1) Borrow - Borrow a book from the Citadel\n" RESET);
     printf("%s", WHITE "2) Return - Return a book that you borrowed\n" RESET);
     printf("%s", WHITE "3) Donate - Make a donation to the Citadel\n" RESET);

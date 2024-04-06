@@ -2,4 +2,4 @@
 
 void displayHeader();
 void displayAuthOptions();
-void displayFunctionalities();
+void displayFunctionalities(char* name);

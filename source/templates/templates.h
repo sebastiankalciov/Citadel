@@ -1,8 +1,14 @@
-//
-// Created by seb on 19.03.2024.
-//
 
-#ifndef CITADEL_TEMPLATES_H
-#define CITADEL_TEMPLATES_H
+#ifndef TEMPLATES_H
+#define TEMPLATES_H
 
-#endif //CITADEL_TEMPLATES_H
+
+typedef struct User{
+    int userId;
+    char* firstName;
+    char* lastName;
+
+}User;
+
+
+#endif
