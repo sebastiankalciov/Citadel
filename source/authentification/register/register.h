@@ -1,7 +1,10 @@
+#pragma once
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include "../../templates/templates.h"
+#include "../../utils/authentification/utils.h"
 
 #define RESET   "\x1B[0m"
 #define RED     "\x1B[31m"

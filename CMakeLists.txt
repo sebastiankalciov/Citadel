@@ -17,7 +17,11 @@ add_executable(Citadel
         source/authentification/register/register.h
         source/menu/menu.h
         source/menu/menu.c
-        source/utils/files.h
-        source/utils/files.c
+        source/utils/files/utils.h
+        source/utils/files/utils.c
         source/authentification/auth.h
-        source/authentification/auth.c)
+        source/authentification/auth.c
+        source/utils/utils.h
+        source/utils/utils.c
+        source/utils/authentification/utils.c
+        source/utils/authentification/utils.h)

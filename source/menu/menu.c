@@ -43,4 +43,3 @@ void displayFunctionalities(char* name) {
     printf("%s", WHITE "5) Log out\n" RESET);
     printf("%s", WHITE "6) Delete account (WARNING: You must not have any active loans in order to perform this action)\n" RESET);
 }
-

@@ -9,7 +9,7 @@ void createAccount(User *user) {
     scanf("%s", user->lastName);
 
     // TO-DO: Check if user is already in DB
-
+    int userFound = findUser(user);
 
     // TO-DO: Add user in DB
 

@@ -1,7 +1,4 @@
-
-#ifndef TEMPLATES_H
-#define TEMPLATES_H
-
+#pragma once
 
 typedef struct User{
     int userId;
@@ -10,5 +7,3 @@ typedef struct User{
 
 }User;
 
-
-#endif
