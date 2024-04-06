@@ -22,6 +22,7 @@ void readFromCSV(const char* filePath) {
     return;
 }
 
+
 FILE* openFile(const char* filePath, const char* mode) {
 
     if (filePath == NULL || strlen(filePath) == 0 ||

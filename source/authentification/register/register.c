@@ -1,6 +1,6 @@
 #include "register.h"
 
-void createAccount(User* user) {
+char createAccount(User* user) {
 
     printf("%s", BLUE "Type first name: " RESET);
     scanf("%s", user->firstName);
@@ -9,13 +9,15 @@ void createAccount(User* user) {
     scanf("%s", user->lastName);
 
     // TO-DO: Check if user is already in DB
-    char userFound = findUser(user);
+    char* filePath = "../database/users.csv";
+    char* userFound = strdup(findUser(filePath, user));
 
-    if (userFound) {
-        printf("You already have an account! You might want to log in instead of creating a new account");
-        return;
+    if (strcmp(userFound, "NULL") != 0) {
+        printf("You already have an account. You might want to sign in.");
+        return 0;
     }
 
-    // TO-DO: Add user in DB
-    addUser(user);
+    addUser(filePath, user);
+    return 1;
+
 }

@@ -11,4 +11,4 @@
 #define BLUE    "\x1B[34m"
 #define WHITE   "\x1B[37m"
 
-void signIn(User *user);
+char signIn(User *user);

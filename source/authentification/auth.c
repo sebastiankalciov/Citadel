@@ -1,16 +1,16 @@
 #include "auth.h"
 
-void authUser(int authInput, User *user) {
+char authUser(int authInput, User *user) {
 
     // Get in account (Login)
     if (authInput == 1) {
 
-        signIn(user);
+        return signIn(user);
 
     }
 
     // Create a new account (Register)
     if (authInput == 2) {
-        createAccount(user);
+        return createAccount(user);
     }
 }

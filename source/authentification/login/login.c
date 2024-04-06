@@ -1,6 +1,6 @@
 #include "login.h"
 
-void signIn(User *user) {
+char signIn(User* user) {
 
     printf("%s", BLUE "Type first name: " RESET);
     scanf("%s", user->firstName);
@@ -9,12 +9,16 @@ void signIn(User *user) {
     scanf("%s", user->lastName);
 
     // TO-DO: Check if user has account
-    char userFound = findUser(user);
 
-    if (!userFound) {
+    char* filePath = "../database/users.csv";
+
+    char* userFound = strdup(findUser(filePath, user));
+
+    if (strcmp(userFound, "NULL") == 0) {
         printf("You do not have an account! You might want to create an account.");
-        return;
+        return 0;
     }
+    return 1;
 
 
 
