@@ -9,6 +9,13 @@ void signIn(User *user) {
     scanf("%s", user->lastName);
 
     // TO-DO: Check if user has account
+    char userFound = findUser(user);
+
+    if (!userFound) {
+        printf("You do not have an account! You might want to create an account.");
+        return;
+    }
+
 
 
     // TO-DO: Display functionalities

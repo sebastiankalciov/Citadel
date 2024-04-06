@@ -5,3 +5,6 @@
 void displayHeader();
 void displayAuthOptions();
 void displayFunctionalities(char* name);
+
+void displayAvailableBooks();
+void displayBorrowFunctionalities();

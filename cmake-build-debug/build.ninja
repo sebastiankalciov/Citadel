@@ -85,8 +85,8 @@ build CMakeFiles/Citadel.dir/source/menu/menu.c.o: C_COMPILER__Citadel_unscanned
   OBJECT_DIR = CMakeFiles/Citadel.dir
   OBJECT_FILE_DIR = CMakeFiles/Citadel.dir/source/menu
 
-build CMakeFiles/Citadel.dir/source/utils/files/files.c.o: C_COMPILER__Citadel_unscanned_Debug /home/seb/Desktop/Citadel/source/utils/files/files.c || cmake_object_order_depends_target_Citadel
-  DEP_FILE = CMakeFiles/Citadel.dir/source/utils/files/files.c.o.d
+build CMakeFiles/Citadel.dir/source/utils/files/utils.c.o: C_COMPILER__Citadel_unscanned_Debug /home/seb/Desktop/Citadel/source/utils/files/utils.c || cmake_object_order_depends_target_Citadel
+  DEP_FILE = CMakeFiles/Citadel.dir/source/utils/files/utils.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Citadel.dir
   OBJECT_FILE_DIR = CMakeFiles/Citadel.dir/source/utils/files
@@ -117,7 +117,7 @@ build CMakeFiles/Citadel.dir/source/utils/authentification/utils.c.o: C_COMPILER
 #############################################
 # Link the executable Citadel
 
-build Citadel: C_EXECUTABLE_LINKER__Citadel_Debug CMakeFiles/Citadel.dir/source/authentification/login/login.c.o CMakeFiles/Citadel.dir/source/authentification/register/register.c.o CMakeFiles/Citadel.dir/source/loans/borrow/borrow.c.o CMakeFiles/Citadel.dir/source/loans/return/return.c.o CMakeFiles/Citadel.dir/source/main.c.o CMakeFiles/Citadel.dir/source/menu/menu.c.o CMakeFiles/Citadel.dir/source/utils/files/files.c.o CMakeFiles/Citadel.dir/source/authentification/auth.c.o CMakeFiles/Citadel.dir/source/utils/utils.c.o CMakeFiles/Citadel.dir/source/utils/authentification/utils.c.o
+build Citadel: C_EXECUTABLE_LINKER__Citadel_Debug CMakeFiles/Citadel.dir/source/authentification/login/login.c.o CMakeFiles/Citadel.dir/source/authentification/register/register.c.o CMakeFiles/Citadel.dir/source/loans/borrow/borrow.c.o CMakeFiles/Citadel.dir/source/loans/return/return.c.o CMakeFiles/Citadel.dir/source/main.c.o CMakeFiles/Citadel.dir/source/menu/menu.c.o CMakeFiles/Citadel.dir/source/utils/files/utils.c.o CMakeFiles/Citadel.dir/source/authentification/auth.c.o CMakeFiles/Citadel.dir/source/utils/utils.c.o CMakeFiles/Citadel.dir/source/utils/authentification/utils.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Citadel.dir
   POST_BUILD = :

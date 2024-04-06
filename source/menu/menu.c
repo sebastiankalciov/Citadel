@@ -29,11 +29,14 @@ void displayAuthOptions() {
     printf("%s", WHITE "1) Login\n" RESET);
     printf("%s", WHITE "2) Register\n" RESET);
     printf("%s", WHITE "TIP: You can use the commands directly in command line (login [name] [surname] / register [name] [surname])\n" RESET);
+    printf("\n");
+    printf("\n");
 }
 
 void displayFunctionalities(char* name) {
 
-    printf("%s", "\n");
+    printf("\n");
+    printf("\n");
     printf(BLUE "Hello %s, what do you want to do today?\n", name);
     printf("%s", WHITE "1) Borrow - Borrow a book from the Citadel\n" RESET);
     printf("%s", WHITE "2) Return - Return a book that you borrowed\n" RESET);
@@ -42,4 +45,24 @@ void displayFunctionalities(char* name) {
     printf("%s", WHITE "4) Search - Search for a book in the Citadel by the title or author's name\n" RESET);
     printf("%s", WHITE "5) Log out\n" RESET);
     printf("%s", WHITE "6) Delete account (WARNING: You must not have any active loans in order to perform this action)\n" RESET);
+}
+
+void displayAvailableBooks() {
+    printf("\n");
+    printf("\n");
+    printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
+    printf("%s %s %s", WHITE "----------------------------", GREEN "BORROW SYSTEM", WHITE "----------------------------\n" RESET);
+    printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
+    printf("%s %s %s", WHITE "---------------------------", BLUE "Available books", WHITE "---------------------------\n" RESET);
+    printf("-------Title----------Author--------Available copies-------------------\n");
+    // TO-DO: While loop through the file to print every book
+    printf("--1) DEMO BOOK 1   DEMO AUTHOR             1\n");
+    printf("--2) DEMO BOOK 2   DEMO AUTHOR             2\n");
+    printf("--3) DEMO BOOK 3   DEMO AUTHOR             3\n");
+    printf("--4) DEMO BOOK 4   DEMO AUTHOR             4\n");
+    printf("--5) Exit the menu\n");
+}
+
+void displayBorrowFunctionalities() {
+
 }

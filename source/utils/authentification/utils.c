@@ -3,9 +3,11 @@
 char findUser(User* user) {
     return 1;
 }
+
 char* getUser(User* user) {
 
 }
+
 void addUser(User* user) {
 
 }

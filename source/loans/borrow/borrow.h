@@ -1,8 +1,7 @@
-//
-// Created by seb on 19.03.2024.
-//
+#pragma once
 
-#ifndef CITADEL_BORROW_H
-#define CITADEL_BORROW_H
+#include "../../templates/templates.h"
 
-#endif //CITADEL_BORROW_H
+void borrow();
+void checkBook(char* name);
+

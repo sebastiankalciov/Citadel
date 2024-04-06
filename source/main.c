@@ -19,11 +19,13 @@ int main() {
 
     authUser(authInput, user);
 
-    //displayFunctionalities(user->firstName);
-    //int menuOption = getOption(1, 6);
+    displayFunctionalities(user->firstName);
+    int menuOption = getOption(1, 6);
 
-    //printf("Option selected: %d", menuOption);
-    char* filePath = "../database/users.csv";
-    readFromCSV(filePath);
+    printf("Option selected: %d", menuOption);
+    displayAvailableBooks();
+    int bookOption = getOption(1, 5);
+    //char* filePath = "../database/users.csv";
+    //readFromCSV(filePath);
     free(user);
 }
