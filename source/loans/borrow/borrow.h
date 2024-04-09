@@ -2,6 +2,6 @@
 
 #include "../../templates/templates.h"
 
-void borrow();
+void borrow(User* user, int bookId);
 void checkBook(char* name);
 

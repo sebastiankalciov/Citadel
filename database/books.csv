@@ -1,1 +1,18 @@
-title, author, copies
+id,title,author,copies
+1,Clean Code: Robert C. Martin Series,Robert C. Martin,22
+2,Crime and Punishment,Fyodor Dostoevsky,24
+3,The Brothers Karamazov,Fyodor Dostoevsky,28
+4,Notes from Underground,Fyodor Dostoevsky,14
+5,Beyond Good and Evil,Friedrich Nietzsche,24
+6,War and Peace,Leo Tolstoy,20
+7,The Prince,Niccolò Machiavelli,18
+8,The Idiot,Fyodor Dostoevsky,25
+9,1984, George Orwell, 17
+10,A Brief History of Time,Stephen Hawking,20
+11,Harry Potter and the Philosopher's Stone,J.K. Rowling,1
+12,Harry Potter and the Chamber of Secrets,J.K. Rowling,6
+13,Harry Potter and the Prisoner of Azkaban,J.K. Rowling,17
+14,Harry Potter and the Goblet of Fire,J.K. Rowling,4
+15,Harry Potter and the Order of the Phoenix,J.K. Rowling,11
+16,Harry Potter and the Half-Blood Prince,J.K. Rowling,10
+17,Harry Potter and the Deathly Hallows,J.K. Rowling,15

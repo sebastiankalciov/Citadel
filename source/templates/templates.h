@@ -7,3 +7,8 @@ typedef struct User{
 
 }User;
 
+typedef struct Book{
+    int bookId, copies;
+    char* title;
+    char* author;
+}Book;

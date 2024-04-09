@@ -8,5 +8,5 @@
 char* findUser(const char* database, User* user);
 
 void addUser(const char* database, User* user);
-int getLastUserID(const char* database);
+int getLastID(const char* database);
 void deleteUser(User* user);

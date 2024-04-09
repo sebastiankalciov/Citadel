@@ -30,12 +30,9 @@ void displayAuthOptions() {
     printf("%s", WHITE "2) Register\n" RESET);
     printf("%s", WHITE "TIP: You can use the commands directly in command line (login [name] [surname] / register [name] [surname])\n" RESET);
     printf("\n");
-    printf("\n");
 }
 
 void displayFunctionalities(char* name) {
-
-    printf("\n");
     printf("\n");
     printf(BLUE "Hello %s, what do you want to do today?\n", name);
     printf("%s", WHITE "1) Borrow - Borrow a book from the Citadel\n" RESET);
@@ -47,22 +44,39 @@ void displayFunctionalities(char* name) {
     printf("%s", WHITE "6) Delete account (WARNING: You must not have any active loans in order to perform this action)\n" RESET);
 }
 
-void displayAvailableBooks() {
-    printf("\n");
+void displayAvailableBooks(const char* database) {
     printf("\n");
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s", WHITE "----------------------------", GREEN "BORROW SYSTEM", WHITE "----------------------------\n" RESET);
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s", WHITE "---------------------------", BLUE "Available books", WHITE "---------------------------\n" RESET);
-    printf("-------Title----------Author--------Available copies-------------------\n");
+    printf("%s| %-45s | %-35s | %s\n\n","Id", "Title", "Author", "Available copies");
+
     // TO-DO: While loop through the file to print every book
-    printf("--1) DEMO BOOK 1   DEMO AUTHOR             1\n");
-    printf("--2) DEMO BOOK 2   DEMO AUTHOR             2\n");
-    printf("--3) DEMO BOOK 3   DEMO AUTHOR             3\n");
-    printf("--4) DEMO BOOK 4   DEMO AUTHOR             4\n");
-    printf("--5) Exit the menu\n");
+    FILE* file = openFile(database, "r");
+    if (file == NULL) {
+        perror("[ERROR] Something is wrong while opening a file!");
+    }
+    char header[200];
+    char data[200];
+
+    fgets(header, 200, file);
+
+    while (fgets(data, sizeof(data), file)) {
+
+        char title[200], author[200];
+        int copies = 0, id;
+
+        if (sscanf(data, "%d,%[^,],%[^,],%d", &id, title, author, &copies) == 4) {
+
+            printf("%d | %-45s | %-35s | %d\n", id, title, author, copies);
+
+        }
+
+    }
 }
 
-void displayBorrowFunctionalities() {
+
+void displayLoans(User* user) {
 
 }
