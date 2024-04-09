@@ -9,6 +9,6 @@ void displayFunctionalities(char* name);
 
 void displayAvailableBooks(const char* database);
 
-void displayLoans(User* user);
+void displayLoans(User* user, const char* database);
 
 void getBookDetails();

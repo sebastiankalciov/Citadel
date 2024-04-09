@@ -39,9 +39,10 @@ void displayFunctionalities(char* name) {
     printf("%s", WHITE "2) Return - Return a book that you borrowed\n" RESET);
     printf("%s", WHITE "3) Donate - Make a donation to the Citadel\n" RESET);
     printf("%s", WHITE "4) Loans - View your active loans\n" RESET);
-    printf("%s", WHITE "4) Search - Search for a book in the Citadel by the title or author's name\n" RESET);
-    printf("%s", WHITE "5) Log out\n" RESET);
-    printf("%s", WHITE "6) Delete account (WARNING: You must not have any active loans in order to perform this action)\n" RESET);
+    printf("%s", WHITE "5) View books - Display all the books from the Citadel\n" RESET);
+    printf("%s", WHITE "6) Search - Search for a book in the Citadel by the title or author's name\n" RESET);
+    printf("%s", WHITE "7) Log out\n" RESET);
+    printf("%s", WHITE "8) Delete account (WARNING: You must not have any active loans in order to perform this action)\n" RESET);
 }
 
 void displayAvailableBooks(const char* database) {
@@ -52,7 +53,6 @@ void displayAvailableBooks(const char* database) {
     printf("%s %s %s", WHITE "---------------------------", BLUE "Available books", WHITE "---------------------------\n" RESET);
     printf("%s| %-45s | %-35s | %s\n\n","Id", "Title", "Author", "Available copies");
 
-    // TO-DO: While loop through the file to print every book
     FILE* file = openFile(database, "r");
     if (file == NULL) {
         perror("[ERROR] Something is wrong while opening a file!");
@@ -77,6 +77,35 @@ void displayAvailableBooks(const char* database) {
 }
 
 
-void displayLoans(User* user) {
+void displayLoans(User* user, const char* database) {
+    printf("\n");
+    printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
+    printf("%s %s %s", WHITE "----------------------------", GREEN "LOAN SYSTEM", WHITE "------------------------------\n" RESET);
+    printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
+    printf("%s %s %s %s", WHITE "------------------------", BLUE "Your loans,",user->firstName , WHITE "------------------------\n" RESET);
+    printf("%-45s | %-35s | %s\n\n", "Title", "Author", "Available copies");
 
+
+    FILE* file = openFile(database, "r");
+    if (file == NULL) {
+        perror("[ERROR] Something is wrong while opening a file!");
+    }
+
+    char header[200];
+    char data[200];
+
+    fgets(header, 200, file);
+
+    while (fgets(data, sizeof(data), file)) {
+
+        char title[200], author[200];
+        int copies = 0, id;
+
+        if (sscanf(data, "%d,%[^,],%[^,],%d", &id, title, author, &copies) == 4) {
+            if (id == user->userId)
+                printf("%-45s | %-35s | %d\n", title, author, copies);
+
+        }
+
+    }
 }

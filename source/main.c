@@ -16,9 +16,9 @@ int main() {
     displayAuthOptions();
 
     User *user;
-    user = malloc(10*sizeof(User));
-    user->firstName = (char*)malloc(100*sizeof(char));
-    user->lastName = (char*)malloc(100*sizeof(char));
+    user = malloc(10 * sizeof(User));
+    user->firstName = (char*) malloc(100 * sizeof(char));
+    user->lastName = (char*) malloc(100 * sizeof(char));
 
     int authInput = getOption(1, 2);
 
@@ -27,43 +27,70 @@ int main() {
 
     displayFunctionalities(user->firstName);
 
-    int menuOption = getOption(1, 6);
+    int menuOption = getOption(1, 8);
 
     switch (menuOption) {
+
         case 1: {
             displayAvailableBooks(BOOKS_DB);
+
             int bookId = getOption(1, getLastID(BOOKS_DB));
-            //borrow(user, bookId);
+
+            Book *newBook;
+            newBook = malloc(10 * sizeof(Book));
+            newBook->bookId = bookId;
+            newBook->author = (char *) malloc(200 * sizeof(char));
+            newBook->title = (char *) malloc(200 * sizeof(char));
+
+            borrow(user, newBook);
+            addLoan(user, newBook);
+
+            printf("Book(s) borrowed succesfully!\n");
+            free(newBook);
+            break;
+
         }
 
-        case 2: { // return a book
-            displayLoans(user);
+        case 2: { // Return a book (reverse borrow)
+            displayLoans(user, LOANS_DB);
             int loanId = getOption(1, 2);
 
             // get the number of books that the user wants to return
             int copies = getOption(1, 2);
         }
 
-        case 3: {
-            break;
-            //Book *book;
+        case 3: { // Donate a book (basically append a new book)
+
+            //Book* book;
             //book = malloc(sizeof(Book));
             //getBookDetails(book);
             //addBook(BOOKS_DB, book)
-
+            break;
         }
 
-        case 4: { // return a book
-            printf("al doile meniu ai mancamiai");
+        case 4: { // Display loans
+            displayLoans(user, LOANS_DB);
+            break;
         }
 
-        case 5: { // return a book
-            printf("al doile meniu ai mancamiai");
+        case 5: { // Display books
+            displayAvailableBooks(BOOKS_DB);
+            break;
         }
 
-        case 6: { // return a book
-            printf("al doile meniu ai mancamiai");
+        case 6: { // Search for a book (author/title)
+            printf("Searching...");
+            break;
 
+        }
+        case 7: { // Log out
+            printf("Logging out...");
+            break;
+
+        }
+        case 8: { // Delete account (basically remove user from db)
+            printf("Account deleted! Feel bad for losing you...");
+            break;
         }
     }
 

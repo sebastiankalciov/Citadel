@@ -12,3 +12,10 @@ typedef struct Book{
     char* title;
     char* author;
 }Book;
+
+typedef struct Loan {
+    int userId, copies;
+    char title[200];
+    char author[200];
+
+}Loan;

@@ -8,8 +8,6 @@ char signIn(User* user) {
     printf("%s", BLUE "Type last name: " RESET);
     scanf("%s", user->lastName);
 
-    // TO-DO: Check if user has account
-
     char* filePath = "../database/users.csv";
 
     char* userFound = strdup(findUser(filePath, user));
@@ -20,7 +18,4 @@ char signIn(User* user) {
     }
     return 1;
 
-
-
-    // TO-DO: Display functionalities
 }

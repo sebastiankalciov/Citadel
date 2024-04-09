@@ -14,14 +14,14 @@ char* findUser(const char* database, User* user) {
 
     while (fgets(data, sizeof(data), file)) {
 
-        row = (char*)malloc(strlen(data) * sizeof(char) + 1);
+        row = (char*) malloc(strlen(data) * sizeof(char) + 1);
         strcpy(row, data);
-
+        int id;
         char firstName[200], lastName[200];
-        if (sscanf(data, "%*d,%[^,],%s", firstName, lastName) == 2) {
+        if (sscanf(data, "%d,%[^,],%s", &id, firstName, lastName) == 3) {
 
             if (strcmp(firstName, user->firstName) == 0 && strcmp(lastName, user->lastName) == 0){
-
+                user->userId = id;
                 fclose(file);
                 return row;
             }
@@ -58,7 +58,7 @@ int getLastID(const char* database) {
 
     while (fgets(data, sizeof(data), file)) {
 
-        row = (char*)malloc(strlen(data) * sizeof(char) + 1);
+        row = (char*) malloc(strlen(data) * sizeof(char) + 1);
         strcpy(row, data);
         columnData = strtok(data, ",");
     }
