@@ -2,6 +2,18 @@
 
 ## Current functionalities
 
+### Header
+![img.png](meta/img.png)
+
+### Menu
+![img.png](meta/img2.png)
+
+### Borrow System
+![img.png](meta/img3.png)
+
+### Loans
+![img.png](meta/img4.png)
+
 - [x] Authentification System
     - Login (first name, last name) from the menu
     - Register (create a new account) from the menu

@@ -83,7 +83,7 @@ void displayLoans(User* user, const char* database) {
     printf("%s %s %s", WHITE "----------------------------", GREEN "LOAN SYSTEM", WHITE "------------------------------\n" RESET);
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s %s", WHITE "------------------------", BLUE "Your loans,",user->firstName , WHITE "------------------------\n" RESET);
-    printf("%-45s | %-35s | %s\n\n", "Title", "Author", "Available copies");
+    printf("%-45s | %-35s | %s\n\n", "Title", "Author", "Copies");
 
 
     FILE* file = openFile(database, "r");
