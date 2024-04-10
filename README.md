@@ -1,6 +1,6 @@
 # Citadel - Library Management System
-
-## Current functionalities
+**Citadel** is a Library Management System made in C for the `Programming Project course`
+## Features
 
 ### Header
 ![img.png](meta/img.png)

@@ -1,17 +1,15 @@
 id,title,author,copies
 1,Clean Code: Robert C. Martin Series,Robert C. Martin,1
-2,The Great Gatsby,F. Scott Fitzgerald,23,The Brothers Karamazov,Fyodor Dostoevsky,26
-
-4,Notes from Underground,Fyodor Dostoevsky,14
-5,Beyond Good and Evil,Friedrich Nietzsche,24
-6,War and Peace,Leo Tolstoy,207,The6,War and Peace,Leo Tolstoy,204
-
-8,The Idiot,Fyodor Dost8,The Idiot,Fyodor Dostoevsky,256
-10,A Brief History of Time,Stephen Hawking,1711,Harry Potter and the Philosopher's Stone,J.K. Rowling,0
-
-12,Harry Potter and the Chamber of Secrets,J.K. Rowling,6
-13,Harry Potter and the Prisoner of Azkaban,J.K. Rowling,17
-14,Harry Potter and the Goblet of Fire,J.K. Rowling,4
-15,Harry Potter and the Order of the Phoenix,J.K. Rowling,20
-16,Harry Potter and the Half-Blood Prince,J.K. Rowling,8
-17,Harry Potter and the Deathly Hallows,J.K. Rowling,14
+2,The Great Gatsby,F. Scott Fitzgerald,2
+3,Notes from Underground,Fyodor Dostoevsky,14
+4,Beyond Good and Evil,Friedrich Nietzsche,24
+5,War and Peace,Leo Tolstoy,20
+6,The Idiot,Fyodor Dost8,The Idiot,Fyodor Dostoevsky,256
+7,A Brief History of Time,Stephen Hawking,17
+8,Harry Potter and the Philosopher's Stone,J.K. Rowling,6
+9,Harry Potter and the Chamber of Secrets,J.K. Rowling,6
+10,Harry Potter and the Prisoner of Azkaban,J.K. Rowling,17
+11,Harry Potter and the Goblet of Fire,J.K. Rowling,4
+12,Harry Potter and the Order of the Phoenix,J.K. Rowling,20
+13,Harry Potter and the Half-Blood Prince,J.K. Rowling,8
+14,Harry Potter and the Deathly Hallows,J.K. Rowling,14
