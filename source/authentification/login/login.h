@@ -12,3 +12,4 @@
 #define WHITE   "\x1B[37m"
 
 char signIn(User *user);
+char signInFromConsole(User* user);

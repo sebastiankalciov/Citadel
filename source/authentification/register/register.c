@@ -21,3 +21,18 @@ char createAccount(User* user) {
     return 1;
 
 }
+
+char createAccountFromConsole(User* user) {
+
+    char* filePath = "../database/users.csv";
+    char* userFound = strdup(findUser(filePath, user));
+
+    if (strcmp(userFound, "NULL") != 0) {
+        printf("You already have an account. You might want to sign in.");
+        return 0;
+    }
+
+    addUser(filePath, user);
+    return 1;
+
+}

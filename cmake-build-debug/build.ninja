@@ -109,6 +109,12 @@ build CMakeFiles/Citadel.dir/source/utils/authentification/utils.c.o: C_COMPILER
   OBJECT_DIR = CMakeFiles/Citadel.dir
   OBJECT_FILE_DIR = CMakeFiles/Citadel.dir/source/utils/authentification
 
+build CMakeFiles/Citadel.dir/source/loans/donate/donate.c.o: C_COMPILER__Citadel_unscanned_Debug /home/seb/Desktop/Citadel/source/loans/donate/donate.c || cmake_object_order_depends_target_Citadel
+  DEP_FILE = CMakeFiles/Citadel.dir/source/loans/donate/donate.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Citadel.dir
+  OBJECT_FILE_DIR = CMakeFiles/Citadel.dir/source/loans/donate
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Citadel
@@ -117,7 +123,7 @@ build CMakeFiles/Citadel.dir/source/utils/authentification/utils.c.o: C_COMPILER
 #############################################
 # Link the executable Citadel
 
-build Citadel: C_EXECUTABLE_LINKER__Citadel_Debug CMakeFiles/Citadel.dir/source/authentification/login/login.c.o CMakeFiles/Citadel.dir/source/authentification/register/register.c.o CMakeFiles/Citadel.dir/source/loans/borrow/borrow.c.o CMakeFiles/Citadel.dir/source/loans/return/return.c.o CMakeFiles/Citadel.dir/source/main.c.o CMakeFiles/Citadel.dir/source/menu/menu.c.o CMakeFiles/Citadel.dir/source/utils/files/utils.c.o CMakeFiles/Citadel.dir/source/authentification/auth.c.o CMakeFiles/Citadel.dir/source/utils/utils.c.o CMakeFiles/Citadel.dir/source/utils/authentification/utils.c.o
+build Citadel: C_EXECUTABLE_LINKER__Citadel_Debug CMakeFiles/Citadel.dir/source/authentification/login/login.c.o CMakeFiles/Citadel.dir/source/authentification/register/register.c.o CMakeFiles/Citadel.dir/source/loans/borrow/borrow.c.o CMakeFiles/Citadel.dir/source/loans/return/return.c.o CMakeFiles/Citadel.dir/source/main.c.o CMakeFiles/Citadel.dir/source/menu/menu.c.o CMakeFiles/Citadel.dir/source/utils/files/utils.c.o CMakeFiles/Citadel.dir/source/authentification/auth.c.o CMakeFiles/Citadel.dir/source/utils/utils.c.o CMakeFiles/Citadel.dir/source/utils/authentification/utils.c.o CMakeFiles/Citadel.dir/source/loans/donate/donate.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Citadel.dir
   POST_BUILD = :

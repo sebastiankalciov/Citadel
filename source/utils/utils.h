@@ -7,3 +7,4 @@
 #include "../templates/templates.h"
 
 int getOption(int lowerLimit, int upperLimit);
+int isValidCommand(const char *command);

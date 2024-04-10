@@ -12,3 +12,4 @@
 #define WHITE   "\x1B[37m"
 
 char createAccount(User* user);
+char createAccountFromConsole(User* user);

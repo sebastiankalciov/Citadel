@@ -19,3 +19,18 @@ char signIn(User* user) {
     return 1;
 
 }
+
+
+char signInFromConsole(User* user) {
+
+    char* filePath = "../database/users.csv";
+
+    char* userFound = strdup(findUser(filePath, user));
+
+    if (strcmp(userFound, "NULL") == 0) {
+        printf("You do not have an account! You might want to create an account.");
+        return 0;
+    }
+    return 1;
+
+}

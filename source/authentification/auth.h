@@ -12,4 +12,4 @@
 #include "./register/register.h"
 #include "./login/login.h"
 
-char authUser(int authInput, User *user);
+char authUser(int authInput, User *user, int menu);

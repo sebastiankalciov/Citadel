@@ -24,4 +24,6 @@ int getOption(int lowerLimit, int upperLimit) {
 
 }
 
-
+int isValidCommand(const char *command) {
+    return (strcmp(command, "login") == 0 || strcmp(command, "register") == 0);
+}

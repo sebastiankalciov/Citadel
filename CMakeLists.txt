@@ -24,4 +24,5 @@ add_executable(Citadel
         source/utils/utils.h
         source/utils/utils.c
         source/utils/authentification/utils.c
-        source/utils/authentification/utils.h)
+        source/utils/authentification/utils.h
+        source/loans/donate/donate.c)

@@ -42,7 +42,6 @@ void displayFunctionalities(char* name) {
     printf("%s", WHITE "5) View books - Display all the books from the Citadel\n" RESET);
     printf("%s", WHITE "6) Search - Search for a book in the Citadel by the title or author's name\n" RESET);
     printf("%s", WHITE "7) Log out\n" RESET);
-    printf("%s", WHITE "8) Delete account (WARNING: You must not have any active loans in order to perform this action)\n" RESET);
 }
 
 void displayAvailableBooks(const char* database) {
@@ -83,7 +82,7 @@ void displayLoans(User* user, const char* database) {
     printf("%s %s %s", WHITE "----------------------------", GREEN "LOAN SYSTEM", WHITE "------------------------------\n" RESET);
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s %s", WHITE "------------------------", BLUE "Your loans,",user->firstName , WHITE "------------------------\n" RESET);
-    printf("%-45s | %-35s | %s\n\n", "Title", "Author", "Copies");
+    printf("%-45s | %-35s | %s\n\n","Title", "Author", "Copies");
 
 
     FILE* file = openFile(database, "r");
@@ -103,9 +102,27 @@ void displayLoans(User* user, const char* database) {
 
         if (sscanf(data, "%d,%[^,],%[^,],%d", &id, title, author, &copies) == 4) {
             if (id == user->userId)
-                printf("%-45s | %-35s | %d\n", title, author, copies);
+                printf("%-45s | %-35s | %d\n",title, author, copies);
 
         }
 
     }
+}
+
+void getBookDetails(Book* book) {
+    printf("\n");
+    printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
+    printf("%s %s %s", WHITE "----------------------------", GREEN "DONATION SYSTEM", WHITE "------------------------------\n" RESET);
+    printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
+    printf("You will have to type below some details about the book you want to donate.\n");
+
+    printf("Please type the name of the book: ");
+    scanf("%s", book->title);
+
+    printf("Please type the name of the author: ");
+    scanf("%s", book->author);
+
+    printf("Please type how many copies do you wish to donate: ");
+    scanf("%d", &book->copies);
+
 }
