@@ -12,6 +12,7 @@ void returnBook(User* user, Book* book, int copies) {
 }
 
 void removeLoan(User* user, Book* book) {
+
     FILE* file = openFile(LOANS_DB, "r+");
 
     if (file == NULL) {
@@ -55,6 +56,7 @@ void removeLoan(User* user, Book* book) {
     long int linePosition = 0;
 
     while (fgets(data, sizeof(data), file)) {
+
         linePosition = ftell(file);
 
         if (sscanf(data, "%d,%[^,],%[^,],%d\n", &loan.userId, loan.title, loan.author, &loan.copies) == 4) {
@@ -104,6 +106,7 @@ void getLoans(User* user, Loan* loan) {
 
         }
     }
+
     loan->copies = loans;
     fclose(file);
 

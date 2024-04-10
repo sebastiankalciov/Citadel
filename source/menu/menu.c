@@ -21,6 +21,7 @@ void displayHeader() {
     printf("%s", WHITE "-----------------------Library Management System-----------------------\n" RESET);
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
+
 }
 
 void displayAuthOptions() {
@@ -30,9 +31,12 @@ void displayAuthOptions() {
     printf("%s", WHITE "2) Register\n" RESET);
     printf("%s", WHITE "TIP: You can use the commands directly in command line (login [name] [surname] / register [name] [surname])\n" RESET);
     printf("\n");
+
 }
 
+
 void displayFunctionalities(char* name) {
+
     printf("\n");
     printf(BLUE "Hello %s, what do you want to do today?\n", name);
     printf("%s", WHITE "1) Borrow - Borrow a book from the Citadel\n" RESET);
@@ -42,9 +46,11 @@ void displayFunctionalities(char* name) {
     printf("%s", WHITE "5) View books - Display all the books from the Citadel\n" RESET);
     printf("%s", WHITE "6) Search - Search for a book in the Citadel by the title or author's name\n" RESET);
     printf("%s", WHITE "7) Log out\n" RESET);
+
 }
 
 void displayAvailableBooks(const char* database) {
+
     printf("\n");
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s", WHITE "----------------------------", GREEN "BORROW SYSTEM", WHITE "----------------------------\n" RESET);
@@ -71,19 +77,18 @@ void displayAvailableBooks(const char* database) {
             printf("%d | %-45s | %-35s | %d\n", id, title, author, copies);
 
         }
-
     }
 }
 
 
 void displayLoans(User* user, const char* database) {
+
     printf("\n");
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s", WHITE "----------------------------", GREEN "LOAN SYSTEM", WHITE "------------------------------\n" RESET);
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s %s", WHITE "------------------------", BLUE "Your loans,",user->firstName , WHITE "------------------------\n" RESET);
     printf("%-45s | %-35s | %s\n\n","Title", "Author", "Copies");
-
 
     FILE* file = openFile(database, "r");
     if (file == NULL) {
@@ -105,11 +110,11 @@ void displayLoans(User* user, const char* database) {
                 printf("%-45s | %-35s | %d\n",title, author, copies);
 
         }
-
     }
 }
 
 void getBookDetails(Book* book) {
+
     printf("\n");
     printf("%s", WHITE "-----------------------------------------------------------------------\n" RESET);
     printf("%s %s %s", WHITE "----------------------------", GREEN "DONATION SYSTEM", WHITE "------------------------------\n" RESET);

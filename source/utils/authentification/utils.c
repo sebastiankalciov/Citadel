@@ -1,7 +1,9 @@
 #include "utils.h"
 
 char* findUser(const char* database, User* user) {
+
     FILE* file = openFile(database, "r");
+
     if (file == NULL) {
         perror("[ERROR] Something is wrong while opening a file!");
     }
@@ -16,8 +18,10 @@ char* findUser(const char* database, User* user) {
 
         row = (char*) malloc(strlen(data) * sizeof(char) + 1);
         strcpy(row, data);
+
         int id;
         char firstName[200], lastName[200];
+
         if (sscanf(data, "%d,%[^,],%s", &id, firstName, lastName) == 3) {
 
             if (strcmp(firstName, user->firstName) == 0 && strcmp(lastName, user->lastName) == 0){
@@ -26,14 +30,16 @@ char* findUser(const char* database, User* user) {
                 return row;
             }
         }
-
     }
+
     fclose(file);
     return "NULL";
+
 }
 
 
 void addUser(const char* database, User* user) {
+
     if (user == NULL)
         return;
 
@@ -44,9 +50,11 @@ void addUser(const char* database, User* user) {
 
     fprintf(file, "\n%d,%s,%s", getLastID(database) + 1, user->firstName, user->lastName);
     fclose(file);
+
 }
 
 int getLastID(const char* database) {
+
     FILE* file = openFile(database, "r");
 
     char header[200];
@@ -62,7 +70,9 @@ int getLastID(const char* database) {
         strcpy(row, data);
         columnData = strtok(data, ",");
     }
+
     return atoi(columnData);
+
 }
 
 void deleteUser(User* user) {

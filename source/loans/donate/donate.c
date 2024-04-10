@@ -1,6 +1,7 @@
 #include "donate.h"
 
 void addBook(Book* book, const char* database) {
+
     FILE* file = openFile(database, "r+");
 
     if (file == NULL) {

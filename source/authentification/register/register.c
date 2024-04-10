@@ -8,7 +8,6 @@ char createAccount(User* user) {
     printf("%s", BLUE "Type last name: " RESET);
     scanf("%s", user->lastName);
 
-    // TO-DO: Check if user is already in DB
     char* filePath = "../database/users.csv";
     char* userFound = strdup(findUser(filePath, user));
 
@@ -16,7 +15,7 @@ char createAccount(User* user) {
         printf("You already have an account. You might want to sign in.");
         return 0;
     }
-
+    user->userId = getLastID(filePath) + 1;
     addUser(filePath, user);
     return 1;
 

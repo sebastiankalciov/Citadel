@@ -1,6 +1,8 @@
 #include "utils.h"
 
+// Function just to understand how reading from a .csv file works
 void readFromCSV(const char* filePath) {
+
     FILE* file = openFile(filePath, "r");
     if (file == NULL)
         return;
@@ -19,6 +21,7 @@ void readFromCSV(const char* filePath) {
             columnData = strtok(NULL, ",");
         }
     }
+
     return;
 }
 

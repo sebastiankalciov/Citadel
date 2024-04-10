@@ -20,7 +20,6 @@ char signIn(User* user) {
 
 }
 
-
 char signInFromConsole(User* user) {
 
     char* filePath = "../database/users.csv";
@@ -32,5 +31,4 @@ char signInFromConsole(User* user) {
         return 0;
     }
     return 1;
-
 }

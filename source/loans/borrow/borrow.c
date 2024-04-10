@@ -7,13 +7,15 @@ void borrow(User* user, Book* book) {
 
     printf("Below you will have to type the number of copies you want.\n");
     printf("If the number of copies you want is larger than the number of available copies, it will print an error.\n");
+
     int copies = getOption(1, book->copies);
     updateBookCopies(book, book->copies - copies);
-    book->copies = copies;
 
+    book->copies = copies;
 }
 
 void findBook(Book* book, char* database) {
+
     FILE* file = openFile(database, "r");
     if (file == NULL) {
         perror("Something is wrong while opening a file!");
@@ -32,24 +34,30 @@ void findBook(Book* book, char* database) {
 
         char title[200], author[200];
         int id, copies;
+
         if (sscanf(data, "%d,%[^,],%[^,],%d", &id, title, author, &copies) == 4) {
 
             if (id == book->bookId){
                 book->copies = copies;
+
                 strcpy(book->title, title);
                 strcpy(book->author, author);
+
                 fclose(file);
+
                 free(row);
                 return;
             }
         }
 
     }
+
     fclose(file);
     free(row);
 }
 
 void addLoan(User* user, Book* book) {
+
     FILE* file = openFile(LOANS_DB, "r+");
 
     if (file == NULL) {
@@ -58,11 +66,10 @@ void addLoan(User* user, Book* book) {
 
     Loan loan;
 
+    char* row;
     int loanExists = 0;
 
-    char header[200];
-    char data[400];
-    char* row;
+    char header[200], data[400];
 
     fgets(header, 200, file);
 
@@ -83,6 +90,7 @@ void addLoan(User* user, Book* book) {
     }
 
     if (!loanExists) {
+
         fseek(file, 0, SEEK_END);
         fprintf(file, "%d,%s,%s,%d\n", user->userId, book->title, book->author, book->copies);
         return;
@@ -152,5 +160,6 @@ void updateBookCopies(Book* book, int copies) {
 
         }
     }
+
     fclose(file);
 }

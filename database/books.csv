@@ -1,14 +1,14 @@
 id,title,author,copies
 1,Clean Code: Robert C. Martin Series,Robert C. Martin,1
-2,The Great Gatsby,F. Scott Fitzgerald,2
-3,The Brothers Karamazov,Fyodor Dostoevsky,28
+2,The Great Gatsby,F. Scott Fitzgerald,23,The Brothers Karamazov,Fyodor Dostoevsky,26
+
 4,Notes from Underground,Fyodor Dostoevsky,14
 5,Beyond Good and Evil,Friedrich Nietzsche,24
-6,War and Peace,Leo Tolstoy,20
-7,The Prince,Niccolò Machiavelli,18
-8,The Idiot,Fyodor Dostoevsky,259,1984,George Orwell,125
-10,A Brief History of Time,Stephen Hawking,20
-11,Harry Potter and the Philosopher's Stone,J.K. Rowling,1
+6,War and Peace,Leo Tolstoy,207,The6,War and Peace,Leo Tolstoy,204
+
+8,The Idiot,Fyodor Dost8,The Idiot,Fyodor Dostoevsky,256
+10,A Brief History of Time,Stephen Hawking,1711,Harry Potter and the Philosopher's Stone,J.K. Rowling,0
+
 12,Harry Potter and the Chamber of Secrets,J.K. Rowling,6
 13,Harry Potter and the Prisoner of Azkaban,J.K. Rowling,17
 14,Harry Potter and the Goblet of Fire,J.K. Rowling,4
