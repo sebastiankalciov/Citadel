@@ -6,14 +6,14 @@
     - Login (first name, last name) from the menu
     - Register (create a new account) from the menu
 
-- [ ] Borrow System
+- [x] Borrow System
     - Borrow a book from the menu as follows:
         - Books are printed on the screen
         - User selects a book
         - User selects the amount of copies
         - New loan created
         - User happy
-      
+
 - [ ] Donation System
     - Donate a book to the library from the menu as follows:
         - Requests details about the book from the user
@@ -23,8 +23,8 @@
         - Library happy
       
 - [x] Display all books from the library
+- [x] Display all the loans of the user
 - [ ] Search for a book
-- [ ] Display all user's loans
 
 ## Requirements (class)
 Each person can borrow multiple books from a library. \
